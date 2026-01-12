@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+venv_new/
+.env
+
+# ChromaDB
+db/
+
+# IDEs
+.vscode/
+.idea/
+
+# Local Data
+*.pdf
+test_imports.py
+verify_chroma.py
+db/
+chroma_data/
+ollama_data/
