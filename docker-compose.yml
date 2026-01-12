@@ -9,6 +9,7 @@ services:
       - OLLAMA_BASE_URL=http://ollama:11434
       - CHROMA_HOST=chromadb
       - CHROMA_PORT=8000
+      - FASTEMBED_CACHE_PATH=/app/fastembed_cache
     depends_on:
       ollama:
         condition: service_healthy
@@ -16,6 +17,7 @@ services:
         condition: service_started
     volumes:
       - ./db:/app/db
+      - fastembed_cache:/app/fastembed_cache
 
   ollama:
     image: ollama/ollama:latest
@@ -44,3 +46,4 @@ services:
 volumes:
   ollama_data:
   chroma_data:
+  fastembed_cache:

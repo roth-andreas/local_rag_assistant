@@ -10,7 +10,8 @@ import chromadb
 DB_PATH = "db"
 
 def get_vectorstore(model_name="BAAI/bge-small-en-v1.5"):
-    embeddings = FastEmbedEmbeddings(model_name=model_name)
+    cache_dir = os.getenv("FASTEMBED_CACHE_PATH", "/app/fastembed_cache")
+    embeddings = FastEmbedEmbeddings(model_name=model_name, cache_path=cache_dir)
     
     chroma_host = os.getenv("CHROMA_HOST")
     chroma_port = os.getenv("CHROMA_PORT")
