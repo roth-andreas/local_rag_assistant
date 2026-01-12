@@ -1,0 +1,31 @@
+# Virtual Environments
+venv/
+venv_new/
+.venv/
+
+# Environment Variables
+.env
+.env.example
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Data (Excluded since we use services volumes)
+db/
+chroma_data/
+ollama_data/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# IDEs
+.vscode/
+.idea/
